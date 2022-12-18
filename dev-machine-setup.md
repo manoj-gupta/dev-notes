@@ -16,7 +16,7 @@ Add public key to gihub account
 
 * Generate ssh key 
 ```
-manoj@ubuntu:/# ssh-keygen -t rsa
+$ ssh-keygen -t rsa
 ```
 
 * Add contents of `.ssh/id_rsa.pub` to [GitHub](https://github.com/settings/keys)
@@ -24,8 +24,8 @@ manoj@ubuntu:/# ssh-keygen -t rsa
 ### Configure git on dev machine
 
 ```
-manoj@ubuntu:~# git config --global user.name "user name"
-manoj@ubuntu:~# git config --global user.email "user email"
+$ git config --global user.name "user name"
+$ git config --global user.email "user email"
 ```
 
 Add these two lines to `~/.gitconfig`
@@ -38,23 +38,23 @@ Add these two lines to `~/.gitconfig`
 
 * Remove existing `golang` installation, if any
 ```
-sudo apt-get remove golang-go
+$ sudo apt-get remove golang-go
 ```
 
 or
 
 ```
-sudo rm -rf /usr/local/go
+$ sudo rm -rf /usr/local/go
 ```
 
 * Get the latest golaong from https://golang.org/doc/install or `wget`
 ```
-wget https://dl.google.com/go/go1.18.1.linux-amd64.tar.gz
+$ wget https://dl.google.com/go/go1.18.1.linux-amd64.tar.gz
 ```
 
 * untar it to `/usr/local`
 ```
-sudo tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
+$ sudo tar -C /usr/local -xzf go1.18.1.linux-amd64.tar.gz
 ```
 
 * Add the following to `.bashrc` and restart terminal
@@ -67,8 +67,9 @@ export GOPRIVATE=github.com/goforedge
 ## Shortcut to install lastest Golang
 
 ```
-wget "https://go.dev/dl/$(curl https://go.dev/VERSION?m=text).linux-amd64.tar.gz"
-sudo tar -C /usr/local -xzf "$(curl https://go.dev/VERSION?m=text).linux-amd64.tar.gz"
+$ sudo rm -rf /usr/local/go
+$ wget "https://go.dev/dl/$(curl https://go.dev/VERSION?m=text).linux-amd64.tar.gz"
+$ sudo tar -C /usr/local -xzf "$(curl https://go.dev/VERSION?m=text).linux-amd64.tar.gz"
 ```
 
 # Install ReactJS
